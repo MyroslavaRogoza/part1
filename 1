@@ -1,0 +1,13 @@
+a=int(input('Vvedit chislo 1 '))
+b=int(input('Vvedit chislo 2 '))
+c=0
+if a%b==0:
+    while a!=0:
+        c=c+1
+        a=a-b
+    print('Result: ',c)
+else:
+    while a > b:
+        c = c + 1
+        a = a - b
+    print('Result: ', c,'Z ostatkom', a)
