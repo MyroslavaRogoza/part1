@@ -1,3 +1,46 @@
+1
+a = input("a=")
+b = input("b=")
+
+if a==b:
+    print("rivni")
+else:
+    print("nerivni")
+2
+n = 1
+n = input("naturalne chislo ")
+i = 1
+resultat = 0
+while i < int(n):
+    tryVstepeniN = 3
+    j = 1
+    while j<i:
+        tryVstepeniN=tryVstepeniN*3
+        j=j+1
+    nfact = 1
+    j2 = 1
+    while j2<i:
+        nfact=nfact*j2
+        j2=j2+1
+    nVstepeniN = i
+    j3 = 1
+    while j3<i:
+        nVstepeniN=nVstepeniN*i
+        j3=j3+1
+    resultat=resultat+(tryVstepeniN*nfact)/nVstepeniN
+    i=i+1
+    print("Resultat",resultat)
+print(resultat)
+3
+a = input("te scho mnozhytsya ")
+b = input("te na scho mnozhytsya ")
+i = 0
+resultat = 0;
+while i < int(b):
+    resultat = resultat+int(a)
+    i = i+1
+print(resultat)
+4
 a=int(input('Vvedit chislo 1 '))
 b=int(input('Vvedit chislo 2 '))
 c=0
