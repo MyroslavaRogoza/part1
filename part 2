@@ -1,0 +1,86 @@
+N=int(input('N= '))
+n=1
+def fact(n):
+    if n==0:
+        return 1
+    else:
+        return n*fact(n-1)
+def summ(N):
+    summr=0
+
+    for n in range(N):
+        n += 1
+        summr += 3 * (n ** n) * fact(n)/(n ** n)
+    return summr
+print(summ(N))
+
+
+
+x = int(input('Vvedit chislo 1 '))
+y = int(input('Vvedit chislo 2 '))
+def mnog(x, y):
+    if y == 1:
+        return x
+    else:
+        result=x + mnog(x, y - 1)
+        return result
+print(mnog(x,y))
+
+
+
+a = int(input('Vvedit dilene: '))
+b = int(input('Vvedit dilnyk: '))
+
+def dilen(a,b):
+    if a==0:
+        return 0
+    else:
+        res=dilen(a-b,b)+1
+        return res
+print(dilen(a, b))
+
+
+
+matrix=[
+    [1, 4, 7],
+    [21, 19, 5],
+    [6, 11, 9],
+]
+i=0
+j=0
+
+for i in range(len(matrix)):
+    for j in range(len(matrix[i])):
+        print(matrix[i][j], end=" ")
+    print()
+sum=0
+sum_neparnyh=0
+ser_arifm=0
+kilkist=0
+dobytok=1
+for i in range(len(matrix)):
+    for j in range(len(matrix)):
+        kilkist+=1
+        sum+=matrix[i][j]
+        ser_arifm=sum/kilkist
+        if matrix[i][j]%2!=0:
+            sum_neparnyh+=matrix[i][j]
+            if i == j:
+                dobytok *= matrix[i][j]
+
+print("Seredne arifm: ",ser_arifm)
+print("Suma vsih neparnyh elementiv: ",sum_neparnyh)
+print("Dobytok elementiv golovnoi diagonaly:",dobytok)
+
+
+
+a = int(input('Vvedit chislo 1 '))
+b = int(input('Vvedit chislo 2 '))
+def najb_spiln_dilnyk(a,b):
+    while a!=b:
+        if a>b:
+            a=a-b
+        else:
+            b=b-a
+    return a
+print("Najblilshyj spilnij dilnyk:",najb_spiln_dilnyk(a,b))
