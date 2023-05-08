@@ -1,0 +1,60 @@
+1
+R1cortezh1 = "Іванов", "Математика", 5
+R1cortezh2 = "Петров", "Фізика", 3
+R2cortezh1 = "Іванов", "Математика", 5
+R2cortezh2 = "Іванов", "Фізика", 4
+R1 = R1cortezh1, R1cortezh2
+R2 = R2cortezh1, R2cortezh2
+def obyednannya(cort1, cort2):
+    obyednannyaR = [cort1]
+    for elem in cort2:
+        if elem in cort1:
+            obyednannyaR = obyednannyaR
+        else:
+            obyednannyaR.append(elem)
+    R3 = tuple(obyednannyaR)
+    return R3
+def peretin(cort1, cort2):
+    peretinR = list()
+    for elem in cort2:
+        if elem in cort1:
+            peretinR.append(elem)
+    R3 = tuple(peretinR)
+    return R3
+def riznytsya(cort1, cort2):
+    for elem in cort1:
+        riznytsyaR = list()
+        if elem in cort2:
+            riznytsyaR = riznytsyaR
+        else:
+            riznytsyaR.append(elem)
+    R3 = tuple(riznytsyaR)
+    return R3
+print(obyednannya(R1, R2))
+print(peretin(R1, R2))
+print(riznytsya(R1, R2))
+2
+weather = dict()
+weather = {1:{"obsv":"sun","tmpr":"hotly","hmdt":"high","wind":"no"},2:{"obsv":"sun","tmpr":"hotly","hmdt":"high","wind":"there is"},3:{"obsv":"overcast","tmpr":"hotly","hmdt":"high","wind":"no"}}
+weather1 = dict()
+weather2 = dict()
+weather3 = dict()
+weather1 = weather.get(1)
+weather2 = weather.get(2)
+weather3 = weather.get(3)
+
+print(weather)
+print(weather1)
+print(weather2)
+print(weather3)
+3
+mnozhyna1 = set(["a","b","c"])
+mnozhyna2 = set(["x","y","z"])
+def dobutok(mnozh1, mnozh2):
+    dobutokmnozhyn = set()
+    for a in mnozh1:
+        for b in mnozh2:
+            dobutokmnozhyn.add(tuple([a,b]))
+            dobutokmnozhyn.add(tuple([b,a]))
+    return dobutokmnozhyn
+print(dobutok(mnozhyna1, mnozhyna2))
