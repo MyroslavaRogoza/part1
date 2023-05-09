@@ -41,10 +41,17 @@ while i < int(b):
     i = i+1
 print(resultat)
 4
-a=int(input('Vvedit chislo 1 '))
-b=int(input('Vvedit chislo 2 '))
+prov = False
+while(prov!=True):
+    a=int(input("te scho dilytsya "))
+    b=int(input("te na scho dilytsya "))
+    if(b==0):
+        print("na nol dilyty ne mozhna")
+    else:
+        prov=True
 c=0
-if a%b==0:
+prov2 = int(a)%int(b)
+if (prov2==0):
     while a!=0:
         c=c+1
         a=a-b
